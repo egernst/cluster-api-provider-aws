@@ -47,8 +47,9 @@ spec:
               description: ControlPlaneLoadBalancer is optional configuration for
                 customizing control plane behavior
               properties:
-                ingressCidr:
-                  description: Ingress CIDRs to allow access to the load balancer
+                ingressCidrBlocks:
+                  description: Ingress rules associated with the load balancer's Security
+                    Group associated with the load balancer/Infra
                   items:
                     type: string
                   type: array
