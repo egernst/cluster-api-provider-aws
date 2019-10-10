@@ -378,6 +378,7 @@ func (s *Service) getSecurityGroupIngressRules(role infrav1.SecurityGroupRole) (
 		if controlPlaneLBSpec.IngressCidrBlocks != nil {
 			elbCidrBlocks = controlPlaneLBSpec.IngressCidrBlocks
 		}
+		elbCidrBlocks := []string{"192.168.0.0/16"}
 
 		return infrav1.IngressRules{
 			s.defaultSSHIngressRule(s.scope.SecurityGroups()[infrav1.SecurityGroupBastion].ID),
